@@ -1,0 +1,23 @@
+body {
+  background-color: skyblue;
+
+}
+
+#random {
+  display: inline;
+}
+
+img {
+  height: 300px;
+}
+
+#search {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+
+}
+
+#form {
+  display: block;
+}

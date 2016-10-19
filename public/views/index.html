@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="scripts/client.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="styles/style.css" />
+    <title></title>
+  </head>
+  <body ng-app="giphyApp" ng-controller="MainController as main">
+
+  <!-- <select ng-model="main.selected" ng-change="main.getFilmData()">
+    <option ng-repeat="film in main.films" ng-value="film.url"> {{ film.title }} </option>
+  </select> -->
+
+<!-- <main ng-class="main.class">
+  <p ng-repeat="line in main.lines track by $index"> {{line}} </p>
+</main> -->
+
+<div id="form">
+
+
+<form>
+<input type="text" name="q" ng-model="main.searchPhrase.q"/>
+<button type="submit" ng-click="main.getSearch()">Search</button>
+</form>
+<button ng-click="main.getRandom()">RaNdOm</button>
+</div>
+
+<div id="random">
+  <img ng-src="{{ main.gifs.image_url }}" />
+</div>
+
+
+<div id="search" ng-repeat="gif in main.gifsArray">
+  <img ng-src="{{ gif.images.original.url }}" />
+</div>
+
+
+
+
+
+
+  </body>
+</html>
