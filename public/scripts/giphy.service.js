@@ -37,3 +37,17 @@ function GiphyAPIService($http){
 
 
 }
+
+
+
+// this.getRandom = function(){
+//   return $http.get(API + '/random?', {
+//     params: {
+//       api_key: 'dc6zaTOxFJmzC',
+//       rating: 'y'
+//     }
+//   })
+//               .then(function(response){
+//   return response.data.data;
+//   });
+// };
