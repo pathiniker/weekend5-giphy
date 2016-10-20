@@ -1,5 +1,6 @@
 body {
-  background-color: skyblue;
+  background-color: #282828;
+  font-family: 'Trebuchet MS';
 
 }
 
@@ -20,4 +21,80 @@ img {
 
 #form {
   display: block;
+  text-align: center;
+  background-color: #008964;
+  /*border-left: 3px solid white;
+  border-right: 3px solid white;*/
+  border-bottom: 3px solid white;
+  margin-top: 0;
+
+
+
+}
+
+input {
+  width: 200px;
+}
+
+form {
+  display: inline-block;
+}
+
+p {
+  display: inline-block;
+  margin: 0;
+  color: #282828;
+  font-size: 90%;
+}
+
+
+#center {
+  letter-spacing: 3px;
+  float: left;
+  width: 33%;
+  background-color: #008964;
+    font-family: 'Trebuchet MS';
+
+
+}
+
+#right {
+  display: inline-block;
+  width: 33%;
+  background-color: #008964;
+
+}
+
+#title {
+  color: white;
+}
+
+#left {
+  float: right;
+  width: 33%;
+  background-color: #008964;
+
+}
+
+button {
+  background-color: #282828;
+  border: 2px solid #282828;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #008964;
+}
+
+button:hover {
+  background-color: #008964;
+  border: 2px solid #008964;
+  color: #282828;
+}
+
+*:focus {
+  outline: none;
+}
+
+#logo {
+  height: 15px;
+  padding-top: 3px;
 }

@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-    <script src="scripts/client.js" charset="utf-8"></script>
+    <script src="scripts/module.js" charset="utf-8"></script>
+    <script src="scripts/main.controller.js" charset="utf-8"></script>
+    <script src="scripts/giphy.service.js" charset="utf-8"></script>
     <link rel="stylesheet" href="styles/style.css" />
     <title></title>
   </head>
@@ -19,12 +21,55 @@
 
 <div id="form">
 
+<!-- <h1>GIF Search</h1> -->
+<div id="left">
+  <form>
+    <p>Quick Search:</p>
+    <select ng-model="main.selected" ng-change="main.getSelected()">
+      <option></option>
+      <option>-- Trending --</option>
+      <option ng-value="halloween">Halloween</option>
+      <option ng-value="spooky">Spooky</option>
+      <option ng-value="skeleton">Skeleton</option>
+      <option ng-value="trump">Trump</option>
+      <option></option>
+      <option>-- Animals --</option>
+      <option ng-value="cat">Cat</option>
+      <option ng-value="dog">Dog</option>
+      <option ng-value="monkey">Monkey</option>
+      <option></option>
+      <option>-- Funny --</option>
+      <option ng-value="fail">Fail</option>
+      <option ng-value="funny">Funny</option>
+      <option ng-value="trump">Trump</option>
+      <option></option>
+      <option>-- Games --</option>
+      <option ng-value="starwars">Star Wars</option>
+      <option ng-value="overwatch">Overwatch</option>
+      <option ng-value="southpark">South Park</option>
 
-<form>
-<input type="text" name="q" ng-model="main.searchPhrase.q"/>
-<button type="submit" ng-click="main.getSearch()">Search</button>
-</form>
-<button ng-click="main.getRandom()">RaNdOm</button>
+
+    </select>
+    <button ng-click="main.getRandom()">Random GIF</button>
+
+  </form>
+</div>
+<div id="center">
+  <img id="logo" src="http://i1.kym-cdn.com/entries/icons/original/000/020/391/api_giphy_logo.png" />
+
+  <p id="title">
+    GIF Search</p>
+</div>
+<div id="right">
+  <form>
+
+  <input type="text" name="q" ng-model="main.searchPhrase.q"/>
+  <button type="submit" ng-click="main.getSearch()">Search</button>
+
+  </form>
+</div>
+
+
 </div>
 
 <div id="random">
