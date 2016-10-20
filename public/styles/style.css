@@ -1,7 +1,6 @@
 body {
   background-color: #282828;
   font-family: 'Trebuchet MS';
-
 }
 
 #random {
@@ -9,37 +8,24 @@ body {
 }
 
 img {
-  height: 300px;
+  height: 225px;
 }
 
-#search {
+#search, #trending {
   display: inline-block;
   margin: 0;
   padding: 0;
-
-}
-
-#trending {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-
 }
 
 #form {
   display: block;
   text-align: center;
-  background-color: #008964;
   border-left: 3px solid white;
   border-right: 3px solid white;
   /*border-bottom: 3px solid #008964;*/
   margin-top: 0;
   background: linear-gradient(#282828, #008964, #008964, #282828);
   border-radius: 9px;
-
-
-
-
 }
 
 input {
@@ -59,29 +45,30 @@ p {
   color: #282828;
   font-size: 90%;
 }
-#right {
-  float: right;
-  width: 33%;
+
+#left, #center, #right {
   background: linear-gradient(#282828, #008964, #008964, #282828);
+  width: 33%;
 }
 
 #left {
   letter-spacing: 3px;
   float: left;
-  width: 33%;
-  background-color: #008964;
-  /*font-family: 'Trebuchet MS';*/
-  background: linear-gradient(#282828, #008964, #008964, #282828);
+}
+#logo {
+  height: 15px;
+  padding-top: 3px;
+}
+#title {
+  color: white;
 }
 
 #center {
   display: inline-block;
-  width: 33%;
-  background: linear-gradient(#282828, #008964, #008964, #282828);
 }
 
-#title {
-  color: white;
+#right {
+  float: right;
 }
 
 
@@ -93,19 +80,10 @@ button {
   padding-right: 10px;
   color: #008964;
 }
-
 button:hover {
   color: #282828;
   background: linear-gradient(#282828, #008964, #282828);
-
-
 }
-
 *:focus {
   outline: none;
-}
-
-#logo {
-  height: 15px;
-  padding-top: 3px;
 }
