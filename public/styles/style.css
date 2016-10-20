@@ -59,36 +59,32 @@ p {
   color: #282828;
   font-size: 90%;
 }
+#right {
+  float: right;
+  width: 33%;
+  background: linear-gradient(#282828, #008964, #008964, #282828);
+}
 
-
-#center {
+#left {
   letter-spacing: 3px;
   float: left;
   width: 33%;
   background-color: #008964;
   /*font-family: 'Trebuchet MS';*/
   background: linear-gradient(#282828, #008964, #008964, #282828);
-
-
 }
 
-#right {
+#center {
   display: inline-block;
   width: 33%;
   background: linear-gradient(#282828, #008964, #008964, #282828);
-
 }
 
 #title {
   color: white;
 }
 
-#left {
-  float: right;
-  width: 33%;
-  background: linear-gradient(#282828, #008964, #008964, #282828);
 
-}
 
 button {
   background-color: #282828;

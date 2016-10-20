@@ -11,22 +11,27 @@
   </head>
   <body ng-app="giphyApp" ng-controller="MainController as main">
 
-  <!-- <select ng-model="main.selected" ng-change="main.getFilmData()">
-    <option ng-repeat="film in main.films" ng-value="film.url"> {{ film.title }} </option>
-  </select> -->
-
-<!-- <main ng-class="main.class">
-  <p ng-repeat="line in main.lines track by $index"> {{line}} </p>
-</main> -->
 
 <div id="form">
 
-<!-- <h1>GIF Search</h1> -->
 <div id="left">
+    <img id="logo" src="http://i1.kym-cdn.com/entries/icons/original/000/020/391/api_giphy_logo.png" />
+    <p id="title">GIF Search</p>
+</div>
+
+  <div id="center">
+    <form>
+    <input type="text" name="q" ng-model="main.searchPhrase.q" placeholder="Search Giphy..."/>
+    <button type="submit" ng-click="main.getSearch()">Search</button>
+    </form>
+  </div>
+
+<div id="right">
   <form>
     <p>Quick Search:</p>
     <select ng-model="main.selected" ng-change="main.getSelected()">
       <option></option>
+
       <option>-- Popular --</option>
       <option ng-value="shrek">Shrek</option>
       <option ng-value="halloween">Halloween</option>
@@ -34,58 +39,43 @@
       <option ng-value="skeleton">Skeleton</option>
       <option ng-value="trump">Trump</option>
       <option></option>
+
       <option>-- Reaction --</option>
       <option ng-value="sigh">Roll Eyes</option>
       <option ng-value="excited">Excited</option>
       <option ng-value="laughing">Laughing</option>
       <option ng-value="scared">Scared</option>
       <option></option>
+
       <option>-- Animals --</option>
       <option ng-value="cat">Cat</option>
       <option ng-value="dog">Dog</option>
       <option ng-value="monkey">Monkey</option>
       <option></option>
+
       <option>-- Funny --</option>
       <option ng-value="fail">Fail</option>
       <option ng-value="funny">Funny</option>
       <option ng-value="trump">Trump</option>
       <option ng-value="montypython">Monty Python</option>
       <option></option>
+
       <option>-- Shows --</option>
       <option ng-value="theoffice">The Office</option>
       <option ng-value="itcrowd">IT Crowd</option>
       <option ng-value="parksandrec">Parks and Rec</option>
       <option></option>
+
       <option>-- Games --</option>
       <option ng-value="starwars">Star Wars</option>
       <option ng-value="overwatch">Overwatch</option>
       <option ng-value="southpark">South Park</option>
-
-
     </select>
+
     <button ng-click="main.getTrending()">Trending GIFs</button>
-
     <button ng-click="main.getRandom()">Random GIF</button>
-
-
-  </form>
-
-</div>
-<div id="center">
-  <img id="logo" src="http://i1.kym-cdn.com/entries/icons/original/000/020/391/api_giphy_logo.png" />
-
-  <p id="title">
-    GIF Search</p>
-</div>
-<div id="right">
-  <form>
-
-  <input type="text" name="q" ng-model="main.searchPhrase.q" placeholder="Search Giphy..."/>
-  <button type="submit" ng-click="main.getSearch()">Search</button>
-
   </form>
 </div>
-
 
 </div>
 
@@ -101,11 +91,6 @@
 <div id="search" ng-repeat="gif in main.gifsArray">
   <img ng-src="{{ gif.images.original.url }}" />
 </div>
-
-
-
-
-
 
   </body>
 </html>
