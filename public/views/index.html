@@ -27,7 +27,7 @@
     <p>Quick Search:</p>
     <select ng-model="main.selected" ng-change="main.getSelected()">
       <option></option>
-      <option>-- Trending --</option>
+      <option>-- Popular --</option>
       <option ng-value="shrek">Shrek</option>
       <option ng-value="halloween">Halloween</option>
       <option ng-value="spooky">Spooky</option>
@@ -51,9 +51,9 @@
       <option ng-value="trump">Trump</option>
       <option></option>
       <option>-- Shows --</option>
-      <option ng-value="The Office">The Office</option>
-      <option ng-value="IT Crowd">IT Crowd</option>
-      <option ng-value="Parks and Rec">Parks and Rec</option>
+      <option ng-value="theoffice">The Office</option>
+      <option ng-value="itcrowd">IT Crowd</option>
+      <option ng-value="parksandrec">Parks and Rec</option>
       <option></option>
       <option>-- Games --</option>
       <option ng-value="starwars">Star Wars</option>
@@ -62,9 +62,13 @@
 
 
     </select>
+    <button ng-click="main.getTrending()">Trending GIFs</button>
+
     <button ng-click="main.getRandom()">Random GIF</button>
 
+
   </form>
+
 </div>
 <div id="center">
   <img id="logo" src="http://i1.kym-cdn.com/entries/icons/original/000/020/391/api_giphy_logo.png" />
@@ -86,6 +90,10 @@
 
 <div id="random">
   <img ng-src="{{ main.gifs.image_url }}" />
+</div>
+
+<div id="trending">
+  <img ng-src="{{ gif.images.original.url }}" />
 </div>
 
 

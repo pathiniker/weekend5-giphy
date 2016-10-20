@@ -7,7 +7,6 @@ function MainController(giphy){
   console.log('Maincontroller loaded');
 
   main.gifs = {};
-  main.lines = [];
   main.query = {};
   main.gifsArray = [];
 
@@ -15,6 +14,15 @@ function MainController(giphy){
     giphy.getRandom()
         .then(function(response){
           main.gifs = response;
+          console.log(response);
+});
+};
+
+main.getTrending = function(){
+  giphy.getTrending()
+      .then(function(response){
+        main.gifsArray = response;
+        console.log(response);
 });
 };
 
@@ -22,6 +30,7 @@ function MainController(giphy){
     giphy.getSearch(main.searchPhrase)
       .then(function(response){
       main.gifsArray = response;
+      console.log(response);
   });
 }
 
@@ -29,6 +38,7 @@ function MainController(giphy){
     giphy.getSelected(main.selected)
         .then(function(response){
           main.gifsArray = response;
+
         });
   }
 

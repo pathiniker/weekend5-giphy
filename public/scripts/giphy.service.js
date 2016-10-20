@@ -13,6 +13,13 @@ function GiphyAPIService($http){
     });
   };
 
+  this.getTrending = function(){
+    return $http.get(API + '/trending?' + key)
+                .then(function(response){
+    return response.data.data;
+    });
+  };
+
   this.getSearch = function(searchPhrase){
     return $http.get(API + '/search?q=' + encodeURI(searchPhrase.q.replace(' ', '+')) + '&' + key)
                 .then(function(response){
@@ -26,5 +33,7 @@ function GiphyAPIService($http){
     return response.data.data;
     });
   };
+
+
 
 }
