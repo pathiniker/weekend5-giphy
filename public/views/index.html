@@ -33,6 +33,12 @@
       <option ng-value="skeleton">Skeleton</option>
       <option ng-value="trump">Trump</option>
       <option></option>
+      <option>-- Reaction --</option>
+      <option ng-value="sigh">Roll Eyes</option>
+      <option ng-value="excited">Excited</option>
+      <option ng-value="laughing">Laughing</option>
+      <option ng-value="scared">Scared</option>
+      <option></option>
       <option>-- Animals --</option>
       <option ng-value="cat">Cat</option>
       <option ng-value="dog">Dog</option>
@@ -42,6 +48,11 @@
       <option ng-value="fail">Fail</option>
       <option ng-value="funny">Funny</option>
       <option ng-value="trump">Trump</option>
+      <option></option>
+      <option>-- Shows --</option>
+      <option ng-value="The Office">The Office</option>
+      <option ng-value="IT Crowd">IT Crowd</option>
+      <option ng-value="Parks and Rec">Parks and Rec</option>
       <option></option>
       <option>-- Games --</option>
       <option ng-value="starwars">Star Wars</option>
@@ -63,7 +74,7 @@
 <div id="right">
   <form>
 
-  <input type="text" name="q" ng-model="main.searchPhrase.q"/>
+  <input type="text" name="q" ng-model="main.searchPhrase.q" placeholder="Search Giphy..."/>
   <button type="submit" ng-click="main.getSearch()">Search</button>
 
   </form>
