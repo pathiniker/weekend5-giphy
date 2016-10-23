@@ -3,11 +3,16 @@
   <head>
     <meta charset="utf-8">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="vendors/angular-route.min.js" charset="utf-8"></script>
+
     <script src="scripts/module.js" charset="utf-8"></script>
+    <script src="scripts/app.config.js" charset="utf-8"></script>
+
     <script src="scripts/main.controller.js" charset="utf-8"></script>
     <script src="scripts/giphy.service.js" charset="utf-8"></script>
     <link rel="stylesheet" href="styles/style.css" />
     <title>GIF Search</title>
+    <base href="/" />
   </head>
 
 <body ng-app="giphyApp" ng-controller="MainController as main">
@@ -15,7 +20,8 @@
 <div id="form">
 
 <div id="left">
-    <button><a href="favorites.html"></a></button>
+
+    <button><a href="/favorites">Favorites</a></button>
     <img id="logo" src="http://i1.kym-cdn.com/entries/icons/original/000/020/391/api_giphy_logo.png" />
     <p id="title">GIF Search</p>
 </div>
@@ -81,6 +87,7 @@
 
 </div> <!-- end FORM div -->
 
+<ng-view></ng-view>
 <div id="random">
 
   <img ng-src="{{ main.gifs.image_url }}" />
@@ -91,9 +98,9 @@
 </div>
 
 <div id="search" ng-repeat="gif in main.gifsArray">
-  <button><a href="google.com">
+  <button>
   <img ng-src="{{ gif.images.original.url }}" />
-  </a></button>
+  </button>
 </div>
 
   </body>
