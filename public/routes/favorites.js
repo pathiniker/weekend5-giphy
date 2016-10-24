@@ -7,6 +7,7 @@ var config = {
 
 var pool = new pg.Pool(config);
 
+
 // GET /favorites
 router.get('/', function (req, res) {
 
@@ -18,7 +19,7 @@ router.get('/', function (req, res) {
       return;
     }
 
-    client.query('SELECT * FROM favs;', function (err, result) {
+    client.query('SELECT * FROM favs ORDER BY id;', function (err, result) {
       done();
       if (err) {
         console.log('Error querying the DB', err);
@@ -33,7 +34,7 @@ router.get('/', function (req, res) {
 });
 
 // POST /favorites
-router.post('/', function(req, res){
+router.post('/', function(req, res, next){
 
   pool.connect(function(err, client, done){
     if (err) {
@@ -43,8 +44,8 @@ router.post('/', function(req, res){
       return;
     }
 
-    client.query('INSERT INTO favs (name, description, pic) VALUES ($1, $2, $3) RETURNING *;',
-    [req.body.name, req.body.description, req.body.pic],
+    client.query('INSERT INTO favs (title, description, url) VALUES ($1, $2, $3) RETURNING *;',
+    [req.body.title, req.body.description, req.body.url],
     function(err, result){
       done();
       if (err) {

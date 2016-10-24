@@ -43,4 +43,13 @@ main.getTrending = function(){
         });
   }
 
+  var favGif = {};
+
+    main.saveGif = function(index) {
+      favGif.url = main.gifsArray[index].images.original.url; //may need to add gif.images in here
+      favGif.description = main.gifDescription[index];
+      giphyService.saveGif(favGif);
+      main.gifDescription[index] = '';
+    }
+
 };

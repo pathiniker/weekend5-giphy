@@ -1,5 +1,5 @@
 {
-  "name": "angular-http-and-apis",
+  "name": "giphyapp",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -8,7 +8,7 @@
     "start": "node server.js"
   },
   "keywords": [],
-  "author": "Ryan Mulcahy <mulchy81@gmail.com>",
+  "author": "Pat Hiniker",
   "license": "ISC",
   "dependencies": {
     "angular": "^1.5.8",

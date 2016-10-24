@@ -1,9 +1,13 @@
 angular.module('giphyApp')
        .config(function($routeProvider, $locationProvider) {
-         $routeProvider.when('/home', {
-           templateUrl: 'views/index.html'
+         $routeProvider.when('/index', {
+           templateUrl: 'views/index.html',
+           controller: 'MainController as main'
          }).when('/favorites', {
-           templateUrl: 'views/favorites.html'
+           templateUrl: 'views/favorites.html',
+           controller: 'FavController as fav'
+         }).otherwise({
+           redirectTo: '/index'
          });
 
          // lets us use normal looking links

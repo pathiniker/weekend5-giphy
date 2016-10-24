@@ -34,7 +34,15 @@ function GiphyAPIService($http){
     });
   };
 
-
+  this.saveGif = function(gifData) {
+    $http({
+      method: 'POST',
+      url: '/favorites',
+      data: gifData
+    }).success(function() {
+      console.log('Saved GIF!');
+    });
+  };
 
 }
 
