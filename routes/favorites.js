@@ -37,7 +37,6 @@ router.get('/', function (req, res) {
 router.post('/', function(req, res, next){
 
   pool.connect(function(err, client, done){
-    try {
     if (err) {
       console.log('Error connecting the DB', err);
       res.sendStatus(500);
@@ -57,11 +56,6 @@ router.post('/', function(req, res, next){
       console.log('Got rows from the DB:', result.rows);
 
     res.send(result.rows);
-  }finally {
-    done();
-  }
 });
 });
 });
-
-module.exports = router;
