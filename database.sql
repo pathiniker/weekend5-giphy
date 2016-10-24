@@ -3,5 +3,5 @@ CREATE TABLE favs (
 	id SERIAL PRIMARY KEY,
 	title varchar(80),
 	description text,
-	pic varchar(300)
+	url varchar(300)
 	);

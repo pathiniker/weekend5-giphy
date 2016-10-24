@@ -1,0 +1,14 @@
+<div id="random">
+
+  <img ng-src="{{ main.gifs.image_url }}" />
+</div>
+
+<div id="trending" ng-repeat="gif in main.gifsArray">
+  <img ng-src="{{ gif.images.original.url }}" />
+</div>
+
+<div id="search" ng-repeat="gif in main.gifsArray">
+  <button>
+  <img ng-src="{{ gif.images.original.url }}" />
+  </button>
+</div>

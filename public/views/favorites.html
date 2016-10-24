@@ -1,7 +1,12 @@
 
 <h3>Favorites</h3>
 
-<a href="/home">Home</a>
-<p>
-  This is some text.
-</p>
+<a href="/index">Home</a>
+
+
+
+<div id="search" ng-repeat="gif in main.gifsArray">
+  <button>
+  <img ng-src="{{ gif.images.original.url }}" />
+  </button>
+</div>

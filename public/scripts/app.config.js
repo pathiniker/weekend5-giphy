@@ -1,11 +1,9 @@
 angular.module('giphyApp')
        .config(function($routeProvider, $locationProvider) {
          $routeProvider.when('/index', {
-           templateUrl: 'views/index.html',
-           controller: 'MainController as main'
+           templateUrl: 'views/index.html'
          }).when('/favorites', {
-           templateUrl: 'views/favorites.html',
-           controller: 'FavController as fav'
+           templateUrl: 'views/favorites.html'
          }).otherwise({
            redirectTo: '/index'
          });
